@@ -37,7 +37,7 @@
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary">Create</button>
-                                <a href="" class="btn btn-secondary">Cancel</a>
+                                <a href="<?= base_url().'index.php/user/index' ?>" class="btn btn-secondary">Cancel</a>
                             </div>
                         </div>
                     </div>
