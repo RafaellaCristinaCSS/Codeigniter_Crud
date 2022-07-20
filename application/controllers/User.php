@@ -52,4 +52,16 @@ class User extends CI_Controller
             redirect(base_url() . 'index.php/user/index');
         }
     }
+    function delete($user_id){
+        $this->load->model('User_model');
+        $user = $this->User_model->getUser($user_id);
+        if(empty($user)){
+            $this->session->set_flashdata('failure', 'Record not found database');
+            redirect(base_url() . 'index.php/user/index');
+        }
+        $this->User_model->deleteUser($user_id);
+        $this->session->set_flashdata('success', 'Record deleted successfully');
+        redirect(base_url() . 'index.php/user/index');
+        
+    }
 }
