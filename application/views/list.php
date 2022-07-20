@@ -18,6 +18,15 @@
     <br>
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                <?php
+                $success = $this->session->userdata('success');
+                $failure = $this->session->userdata('failure');
+                ?>
+              <?= ($success != ""?'<div class="alert alert-success">'.$success.'</div>':"") ?>
+              <?= ($failure != ""?'<div class="alert alert-success">'.$failure.'</div>':"") ?>
+                
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-8">
